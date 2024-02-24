@@ -1,0 +1,147 @@
+:root {
+  --background: #eae5e5;
+  --text-color: rgba(0, 0, 0, 0.87);
+  --toggle-color: #000;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #eae5e5;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark {
+  --background: #333;
+  --text-color: #fff;
+  --toggle-color: #fff;
+}
+
+.toggle-theme {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+  padding-inline: 10px;
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  min-height: 100vh;
+}
+
+.section {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.accordion {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.accordion-btn {
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+}
+
+.accordion-image {
+  width: clamp(100px, 100%, 200px);
+  height: 100%;
+  object-fit: contain;
+}
+
+.accordion-content {
+  padding: 0 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.button-container {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#result {
+  font-size: 30px;
+}
+
+.input_area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.red-text {
+  color: red;
+}
+
+.green-text {
+  color: green;
+}
+
+.alert {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.alert-danger {
+  background-color: rgb(174, 63, 63);
+  color: #fff;
+}
+
+.alert-success {
+  background-color: rgb(63, 174, 63);
+  color: #fff;
+}
