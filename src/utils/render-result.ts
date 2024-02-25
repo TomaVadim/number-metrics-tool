@@ -1,7 +1,11 @@
-import { NODES } from "../constant/nodes";
+export const renderResult = (result: number | number[]): void => {
+  const resultWindow = document.getElementById("result") as HTMLDivElement;
 
-const { resultDiv } = NODES;
+  if (Array.isArray(result)) {
+    resultWindow.textContent = `Result: ${result}`;
+    resultWindow.style.fontSize = "14px";
+    return;
+  }
 
-export const renderResult = (result: number): void => {
-  resultDiv.textContent = `Result: ${result.toString()}`;
+  resultWindow.textContent = `Result: ${result.toString()}`;
 };
