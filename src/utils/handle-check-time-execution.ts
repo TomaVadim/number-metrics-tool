@@ -1,4 +1,4 @@
-import { showTimeFunctionExecution } from "./count-time-function-execution";
+import { showTimeFunctionExecution } from "./show-time-function-execution";
 import { findLeastNumber } from "./find-least-number";
 import { findBiggestNumber } from "./find-biggest-number";
 import { findMedian } from "./find-median";
