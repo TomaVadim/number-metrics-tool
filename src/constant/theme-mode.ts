@@ -1,3 +1,1 @@
-export const THEME_MODE = {
-  mode: localStorage.getItem("theme-mode"),
-};
+export const THEME_MODE = localStorage.getItem("theme-mode");

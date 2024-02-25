@@ -1,12 +1,9 @@
-interface RenderMessageOptions {
+interface Props {
   message: string;
   targetElement: HTMLElement;
 }
 
-export const renderMessage = ({
-  message,
-  targetElement,
-}: RenderMessageOptions): void => {
+export const renderMessage = ({ message, targetElement }: Props): void => {
   const existedSpan = targetElement.querySelector("span") as HTMLSpanElement;
 
   if (existedSpan) {

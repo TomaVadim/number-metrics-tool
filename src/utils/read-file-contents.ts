@@ -1,33 +1,25 @@
-import { NODES } from "../constant/nodes";
+import { readFileAsync } from "./read-file-async";
 import { renderMessage } from "./render-message";
 
-const { inputArea } = NODES;
+export const readFileContents = async (file: File): Promise<number[]> => {
+  const inputArea = document.querySelector(".input_area") as HTMLDivElement;
 
-export const readFileContents = (file: File): Promise<number[]> => {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-
+  try {
     renderMessage({
       message: "Reading file...",
       targetElement: inputArea,
     });
 
-    reader.onload = function (event: ProgressEvent<FileReader>) {
-      const contents = event.target?.result as string;
-      const numbersArray = contents.split("\n").map(Number);
+    const contents = await readFileAsync(file);
+    const numbersArray = contents.split("\n").map(Number);
 
-      renderMessage({
-        message: "File read successfully",
-        targetElement: inputArea,
-      });
+    renderMessage({
+      message: "File read successfully",
+      targetElement: inputArea,
+    });
 
-      resolve(numbersArray);
-    };
-
-    reader.onerror = function (event) {
-      reject(event);
-    };
-
-    reader.readAsText(file);
-  });
+    return numbersArray;
+  } catch (error) {
+    throw new Error("Error reading file");
+  }
 };

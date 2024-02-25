@@ -5,6 +5,10 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Number Metrics Tool</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
   </head>
   <body>
     <main class="main">
@@ -61,7 +65,10 @@
 
       <section>
         <div class="accordion">
-          <button class="accordion-btn">How it use?</button>
+          <button class="accordion-btn">
+            <h4 class="accordion-title">How to use?</h4>
+            <span class="material-symbols-outlined"> expand_more </span>
+          </button>
           <div class="accordion-content">
             <img
               class="accordion-image"
@@ -76,22 +83,91 @@
               After you loaded file you can find the biggest, smallest, median
               and mean of numbers
             </p>
+            <p>
+              If you want to know how much time it takes to execute function you
+              can check it by clicking on the button with clock
+            </p>
           </div>
         </div>
       </section>
-      <section class="section">
+      <div class="section">
         <div id="result">Result: 0</div>
         <div class="input_area">
           <input type="file" accept=".txt" id="input_load_file" />
         </div>
 
-        <div class="button-container">
-          <button class="btn" id="smallest">Find the smallest number</button>
-          <button class="btn" id="biggest">Find the biggest number</button>
-          <button class="btn" id="median">Find the median</button>
-          <button class="btn" id="mean">Find the mean</button>
+        <div class="buttons">
+          <div class="buttons_container">
+            <button class="btn" id="smallest">Find the smallest number</button>
+
+            <span
+              class="material-symbols-outlined counter"
+              aria-label="Check time execution"
+            >
+              timer
+            </span>
+          </div>
+
+          <div class="buttons_container">
+            <button class="btn" id="biggest">Find the biggest number</button>
+
+            <span
+              class="material-symbols-outlined counter"
+              aria-label="Check time execution"
+            >
+              timer
+            </span>
+          </div>
+
+          <div class="buttons_container">
+            <button class="btn" id="median">Find the median</button>
+
+            <span
+              class="material-symbols-outlined counter"
+              aria-label="Check time execution"
+            >
+              timer
+            </span>
+          </div>
+
+          <div class="buttons_container">
+            <button class="btn" id="mean">Find the mean</button>
+
+            <span
+              class="material-symbols-outlined counter"
+              aria-label="Check time execution"
+            >
+              timer
+            </span>
+          </div>
+
+          <div class="buttons_container">
+            <button class="btn" id="increasing-sequence">
+              Find largest increasing sequence
+            </button>
+
+            <span
+              class="material-symbols-outlined counter"
+              aria-label="Check time execution"
+            >
+              timer
+            </span>
+          </div>
+
+          <div class="buttons_container">
+            <button class="btn" id="decreasing-sequence">
+              Find largest decreasing sequence
+            </button>
+
+            <span
+              class="material-symbols-outlined counter"
+              aria-label="Check time execution"
+            >
+              timer
+            </span>
+          </div>
         </div>
-      </section>
+      </div>
     </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
