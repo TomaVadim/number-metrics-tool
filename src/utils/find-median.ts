@@ -1,6 +1,4 @@
-import { countExecutionTime } from "./count-execution-time";
-
-export const findMedian = countExecutionTime((numbers: number[]): number => {
+export const findMedian = (numbers: number[]): number => {
   const sortedNumbers = numbers.slice().sort((a, b) => a - b);
 
   const length = sortedNumbers.length;
@@ -12,4 +10,4 @@ export const findMedian = countExecutionTime((numbers: number[]): number => {
 
     return (sortedNumbers[middleIndex - 1] + sortedNumbers[middleIndex]) / 2;
   }
-});
+};
