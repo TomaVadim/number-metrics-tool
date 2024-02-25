@@ -1,13 +1,10 @@
-interface RenderAlertMessageOptions {
+interface Props {
   message: string;
   status: "success" | "error";
 }
 
-export const renderAlertMessage = ({
-  message,
-  status,
-}: RenderAlertMessageOptions): void => {
-  const existedAlert = document.querySelector(".alert");
+export const renderAlertMessage = ({ message, status }: Props): void => {
+  const existedAlert = document.querySelector(".alert") as HTMLDivElement;
 
   if (existedAlert) {
     existedAlert.remove();
