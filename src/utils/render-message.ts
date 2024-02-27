@@ -4,7 +4,7 @@ interface Props {
 }
 
 export const renderMessage = ({ message, targetElement }: Props): void => {
-  const existedSpan = targetElement.querySelector("span") as HTMLSpanElement;
+  const existedSpan = targetElement.querySelector("span");
 
   if (existedSpan) {
     existedSpan.classList.remove("red-text");

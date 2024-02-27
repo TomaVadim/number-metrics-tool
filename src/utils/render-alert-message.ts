@@ -4,7 +4,7 @@ interface Props {
 }
 
 export const renderAlertMessage = ({ message, status }: Props): void => {
-  const existedAlert = document.querySelector(".alert") as HTMLDivElement;
+  const existedAlert = document.querySelector(".alert");
 
   if (existedAlert) {
     existedAlert.remove();
