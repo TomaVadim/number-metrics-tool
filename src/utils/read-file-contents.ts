@@ -11,7 +11,10 @@ export const readFileContents = async (file: File): Promise<number[]> => {
     });
 
     const contents = await readFileAsync(file);
-    const numbersArray = contents.split("\n").map(Number);
+
+    const numbersArray = contents.length
+      ? contents.split("\n").map(Number)
+      : [];
 
     renderMessage({
       message: "File read successfully",

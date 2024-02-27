@@ -4,6 +4,7 @@ export const readFileAsync = (file: File): Promise<string> => {
 
     reader.onload = (event: ProgressEvent<FileReader>) => {
       const contents = event.target?.result as string;
+
       resolve(contents);
     };
 

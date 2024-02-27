@@ -7,9 +7,8 @@ import { findLargestIncreasingSequence } from "./find-largest-increasing-sequenc
 import { findLargestDecreasingSequence } from "./find-largest-decreasing-sequence";
 
 export const handleCheckTimeExecution = (array: number[]) => {
-  const counters = document.querySelectorAll(
-    ".counter"
-  ) as NodeListOf<HTMLSpanElement>;
+  const counters = document.querySelectorAll(".counter");
+
   const arrayOfFunctions = [
     findLeastNumber,
     findBiggestNumber,
@@ -19,7 +18,7 @@ export const handleCheckTimeExecution = (array: number[]) => {
     findLargestDecreasingSequence,
   ];
 
-  counters.forEach((counter, index) => {
+  counters?.forEach((counter, index) => {
     counter.addEventListener("click", () => {
       const func = arrayOfFunctions[index];
       showTimeFunctionExecution(func)(array);

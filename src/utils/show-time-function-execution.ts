@@ -6,6 +6,7 @@ export const showTimeFunctionExecution = <T extends (...args: any[]) => any>(
   return (...args: Parameters<T>): void => {
     const startTime = Date.now();
     func(...args);
+    console.log(...args);
     const executionTime = Date.now() - startTime;
 
     renderAlertMessage({
