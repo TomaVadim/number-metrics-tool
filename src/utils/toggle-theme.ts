@@ -1,12 +1,11 @@
-import { disableDarkMode } from "./disable-dark-mode";
-import { enableDarkMode } from "./enable-dark-mode";
+import { toggleDarkMode } from "./toggle-dark-mode";
 
 export const toggleTheme = () => {
   const mode = localStorage.getItem("theme-mode");
 
   if (mode !== "dark") {
-    enableDarkMode();
+    toggleDarkMode("dark");
   } else {
-    disableDarkMode();
+    toggleDarkMode("light");
   }
 };

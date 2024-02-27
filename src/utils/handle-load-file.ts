@@ -1,3 +1,4 @@
+import { handleCheckExecutionAllFunctions } from "./handle-check-execution-all-functions";
 import { handleCheckTimeExecution } from "./handle-check-time-execution";
 import { handleEvents } from "./handle-events";
 import { readFileContents } from "./read-file-contents";
@@ -19,6 +20,8 @@ export const handleLoadFile = async (e: Event): Promise<void> => {
         message: "File is empty",
         status: "error",
       });
+
+      return;
     } else {
       renderAlertMessage({
         message: "File read successfully",
@@ -28,6 +31,8 @@ export const handleLoadFile = async (e: Event): Promise<void> => {
       handleEvents(array);
 
       handleCheckTimeExecution(array);
+
+      handleCheckExecutionAllFunctions(array);
     }
   } catch (error) {
     renderAlertMessage({
