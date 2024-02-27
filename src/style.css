@@ -122,6 +122,9 @@ body {
 }
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   padding: 5px 10px;
   border: none;
   border-radius: 5px;
@@ -129,6 +132,10 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+
+.highlight {
+  border: 2px solid orange;
 }
 
 #result {
